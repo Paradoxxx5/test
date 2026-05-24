@@ -1,0 +1,483 @@
+/* ================================================
+   ASTROVAX COSMIC THEME FOR MICROBIN
+   Drop into /app/static/ and set:
+   MICROBIN_CUSTOM_CSS=/static/astrovax.css
+   ================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* ---- STAR FIELD BACKGROUND ---- */
+html {
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    color: #c8d8f0 !important;
+    background-color: #040816 !important;
+    background-image:
+        radial-gradient(circle at 18% 18%, rgba(0, 212, 255, .13), transparent 28%),
+        radial-gradient(circle at 82% 28%, rgba(157, 92, 255, .16), transparent 32%),
+        radial-gradient(circle at 50% 98%, rgba(98, 0, 255, .20), transparent 35%) !important;
+    background-attachment: fixed !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Static star dots */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+        radial-gradient(1px 1px at 5%   8%,  rgba(255,255,255,.8), transparent),
+        radial-gradient(1px 1px at 12%  55%, rgba(0,212,255,.7),   transparent),
+        radial-gradient(2px 2px at 20%  30%, rgba(255,255,255,.6), transparent),
+        radial-gradient(1px 1px at 28%  75%, rgba(157,92,255,.8),  transparent),
+        radial-gradient(1px 1px at 35%  15%, rgba(255,255,255,.5), transparent),
+        radial-gradient(2px 2px at 42%  88%, rgba(0,212,255,.6),   transparent),
+        radial-gradient(1px 1px at 50%  42%, rgba(255,255,255,.7), transparent),
+        radial-gradient(1px 1px at 58%  68%, rgba(157,92,255,.6),  transparent),
+        radial-gradient(2px 2px at 65%  22%, rgba(255,255,255,.8), transparent),
+        radial-gradient(1px 1px at 72%  50%, rgba(0,212,255,.5),   transparent),
+        radial-gradient(1px 1px at 80%  12%, rgba(255,255,255,.7), transparent),
+        radial-gradient(2px 2px at 88%  80%, rgba(157,92,255,.7),  transparent),
+        radial-gradient(1px 1px at 93%  38%, rgba(255,255,255,.6), transparent),
+        radial-gradient(1px 1px at 97%  62%, rgba(0,212,255,.8),   transparent),
+        radial-gradient(1px 1px at 15%  92%, rgba(255,255,255,.5), transparent),
+        radial-gradient(2px 2px at 45%  5%,  rgba(157,92,255,.6),  transparent),
+        radial-gradient(1px 1px at 75%  95%, rgba(255,255,255,.7), transparent),
+        radial-gradient(1px 1px at 62%  3%,  rgba(0,212,255,.6),   transparent);
+}
+
+/* ---- CONTENT WRAPPER ---- */
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Water.css uses a centered body — we keep the content centered */
+body {
+    padding: 2rem 1.2rem 5rem !important;
+}
+
+/* ---- TYPOGRAPHY ---- */
+h1, h2, h3, h4, h5, h6 {
+    color: #8cf7ff !important;
+    font-weight: 400 !important;
+    border-bottom: none !important;
+}
+
+h1 { font-size: 1.85rem !important; font-weight: 300 !important; }
+h2 { font-size: 1.45rem !important; }
+h3 { font-size: 1.2rem  !important; }
+h4 { font-size: 1.05rem !important; }
+
+p, li, dd, dt { color: #b0c8e8 !important; }
+
+a {
+    color: #47d7ff !important;
+    text-decoration: none !important;
+}
+a:hover {
+    color: #8cf7ff !important;
+    text-decoration: underline !important;
+}
+
+small   { color: #7a9cc0 !important; font-size: 0.82rem !important; }
+b, strong { color: #d0eaff !important; }
+label   { color: #9db4d0 !important; font-size: 0.87rem !important; font-weight: 500 !important; }
+mark    { background: rgba(0,212,255,.2) !important; color: #8cf7ff !important; }
+
+hr {
+    height: 1px !important;
+    background: linear-gradient(90deg, transparent, #00d4ff 30%, #9d5cff 70%, transparent) !important;
+    border: none !important;
+    margin: 1.2rem 0 !important;
+}
+
+/* ---- NAV (water.css renders #nav as a plain div) ---- */
+#nav {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem 1rem !important;
+    margin-bottom: 1.8rem !important;
+    padding-bottom: 1rem !important;
+    border-bottom: 1px solid rgba(0,212,255,.18) !important;
+    background: transparent !important;
+}
+
+#nav b {
+    font-size: 1.9rem !important;
+    font-weight: 300 !important;
+    background: linear-gradient(90deg, #5fe7ff, #b26cff) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    margin-right: 0.4rem !important;
+}
+
+#nav b a {
+    background: linear-gradient(90deg, #5fe7ff, #b26cff) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    text-decoration: none !important;
+}
+
+#nav a {
+    color: #8ecfff !important;
+    -webkit-text-fill-color: #8ecfff !important;
+    font-size: 0.88rem !important;
+    padding: 4px 13px !important;
+    border-radius: 20px !important;
+    border: 1px solid rgba(0,212,255,.22) !important;
+    transition: all 0.18s !important;
+    text-decoration: none !important;
+}
+
+#nav a:hover {
+    background: rgba(0,212,255,.1) !important;
+    border-color: rgba(0,212,255,.5) !important;
+    color: #47d7ff !important;
+    -webkit-text-fill-color: #47d7ff !important;
+}
+
+/* ---- INPUTS, SELECTS, TEXTAREAS ---- */
+input:not([type="submit"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+select,
+textarea {
+    background: rgba(5, 15, 50, 0.85) !important;
+    border: 1px solid rgba(0,212,255,.28) !important;
+    border-radius: 10px !important;
+    color: #c8d8f0 !important;
+    padding: 0.52rem 0.9rem !important;
+    font-size: 0.94rem !important;
+    font-family: inherit !important;
+    outline: none !important;
+    transition: border-color 0.18s, box-shadow 0.18s !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    box-shadow: none !important;
+}
+
+input:not([type="submit"]):not([type="file"]):focus,
+select:focus,
+textarea:focus {
+    border-color: rgba(0,212,255,.65) !important;
+    box-shadow: 0 0 0 3px rgba(0,212,255,.1) !important;
+    outline: none !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #2d4460 !important;
+    opacity: 1 !important;
+}
+
+select option    { background: #09153b; color: #c8d8f0; }
+optgroup         { color: #47d7ff; font-style: normal; }
+select           { height: 3rem !important; }
+textarea         { resize: vertical !important; font-family: "Fira Code", Consolas, monospace !important; }
+
+/* ---- BUTTONS ---- */
+input[type="submit"],
+button {
+    background: linear-gradient(90deg, #2dd4ff, #8b5cf6) !important;
+    border: none !important;
+    border-radius: 12px !important;
+    color: #fff !important;
+    padding: 0.55rem 1.3rem !important;
+    font-size: 0.94rem !important;
+    font-family: inherit !important;
+    cursor: pointer !important;
+    transition: opacity 0.18s, box-shadow 0.18s !important;
+    box-shadow: 0 0 18px rgba(39,216,255,.22) !important;
+    -webkit-appearance: none !important;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    opacity: 0.85 !important;
+    box-shadow: 0 0 28px rgba(39,216,255,.42) !important;
+}
+
+input[type="submit"]:disabled,
+button:disabled {
+    opacity: 0.4 !important;
+    cursor: not-allowed !important;
+}
+
+/* Small inline action buttons */
+.small-button {
+    font-size: 0.78rem !important;
+    padding: 3px 12px !important;
+    border-radius: 20px !important;
+    background: rgba(0,212,255,.08) !important;
+    border: 1px solid rgba(0,212,255,.28) !important;
+    color: #47d7ff !important;
+    box-shadow: none !important;
+}
+.small-button:hover {
+    background: rgba(0,212,255,.18) !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+}
+
+/* ---- TABLES ---- */
+table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-size: 0.9rem !important;
+    border: none !important;
+}
+
+thead tr {
+    background: transparent !important;
+    border-bottom: 1px solid rgba(0,212,255,.22) !important;
+}
+
+th {
+    color: #8cf7ff !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+    padding: 8px 10px !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+td {
+    padding: 8px 10px !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255,255,255,.05) !important;
+    color: #b0c8e8 !important;
+    background: transparent !important;
+}
+
+tr:last-child td { border-bottom: none !important; }
+tbody tr:hover td { background: rgba(0,212,255,.04) !important; }
+
+/* ---- CODE & PRE ---- */
+pre, code, kbd, samp {
+    background: rgba(0,0,0,.4) !important;
+    border: 1px solid rgba(0,212,255,.12) !important;
+    border-radius: 8px !important;
+    color: #8cf7ff !important;
+    font-family: "Fira Code", "Cascadia Code", Consolas, monospace !important;
+    font-size: 0.88rem !important;
+}
+
+pre {
+    padding: 1rem !important;
+    overflow-x: auto !important;
+}
+
+code {
+    padding: 2px 6px !important;
+    border-radius: 5px !important;
+}
+
+/* ---- DETAILS / SUMMARY ---- */
+details {
+    background: rgba(9,21,59,.7) !important;
+    border: 1px solid rgba(0,212,255,.18) !important;
+    border-radius: 10px !important;
+    padding: 0.8rem 1rem !important;
+    margin-bottom: 0.8rem !important;
+}
+
+summary {
+    color: #8cf7ff !important;
+    cursor: pointer !important;
+    font-weight: 500 !important;
+}
+
+/* ---- BLOCKQUOTE ---- */
+blockquote {
+    border-left: 3px solid #47d7ff !important;
+    background: rgba(0,212,255,.05) !important;
+    margin: 1rem 0 !important;
+    padding: 0.8rem 1.2rem !important;
+    border-radius: 0 8px 8px 0 !important;
+    color: #b0c8e8 !important;
+}
+
+/* ---- AUTH FORM ---- */
+#auth-form {
+    background: linear-gradient(180deg, rgba(9,21,59,.92), rgba(7,16,43,.92)) !important;
+    border: 1px solid rgba(0,212,255,.2) !important;
+    border-radius: 20px !important;
+    padding: 2rem !important;
+    max-width: 420px !important;
+    margin: 2.5rem auto !important;
+    box-shadow: 0 8px 40px rgba(0,0,0,.45) !important;
+}
+
+/* ---- DECRYPTION BOX ---- */
+#decryption {
+    background: rgba(9,21,59,.88) !important;
+    border: 1px solid rgba(0,212,255,.2) !important;
+    border-radius: 14px !important;
+    padding: 1.2rem !important;
+}
+
+/* ---- FILE ATTACH BUTTON ---- */
+#attach-file-button-label {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 0.55rem 1rem !important;
+    border: 2px dashed rgba(0,212,255,.38) !important;
+    border-radius: 12px !important;
+    color: #47d7ff !important;
+    cursor: pointer !important;
+    font-size: 0.85rem !important;
+    transition: all 0.18s !important;
+    background: transparent !important;
+}
+
+#attach-file-button-label:hover {
+    background: rgba(0,212,255,.07) !important;
+    border-color: rgba(0,212,255,.65) !important;
+}
+
+#attach-file-button {
+    color: #47d7ff !important;
+}
+
+/* ---- CODE DISPLAY AREA ---- */
+#code {
+    background: rgba(0,0,0,.35) !important;
+    border: 1px solid rgba(0,212,255,.1) !important;
+    border-radius: 10px !important;
+    padding: 1rem !important;
+    color: #c8e6ff !important;
+    font-family: "Fira Code", Consolas, monospace !important;
+    font-size: 0.88rem !important;
+    min-height: 2rem !important;
+}
+
+/* ---- LINE NUMBERS ---- */
+code-line {
+    counter-increment: line;
+    float: left;
+    clear: left;
+}
+
+code-line::before {
+    content: counter(line);
+    display: inline-block;
+    width: 1.8rem;
+    border-right: 1px solid rgba(0,212,255,.18);
+    color: #2d4460;
+    margin-right: 0.5rem;
+    text-align: right;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* ---- FILE GALLERY ---- */
+.gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)) !important;
+    gap: 1rem !important;
+}
+
+.file-card {
+    background: rgba(9,21,59,.8) !important;
+    border: 1px solid rgba(0,212,255,.15) !important;
+    border-radius: 12px !important;
+    padding: 0.5rem !important;
+}
+
+.embed-media {
+    width: 100% !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: transform 0.2s !important;
+}
+
+.gallery-grid .embed-media {
+    aspect-ratio: 1/1 !important;
+    object-fit: cover !important;
+}
+
+.stream-view {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+}
+
+.stream-view .file-card   { width: 100% !important; max-width: 800px !important; margin: 0 auto !important; }
+.stream-view .embed-media { aspect-ratio: auto !important; object-fit: contain !important; max-height: 80vh !important; }
+
+/* ---- EMBED WRAPPER ---- */
+#embed {
+    background: rgba(0,0,0,.22) !important;
+    border-radius: 10px !important;
+    margin: 1rem auto !important;
+    width: fit-content !important;
+    max-height: 480px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* ---- FOOTER ---- */
+footer, body > p:last-of-type {
+    color: #2d4460 !important;
+    font-size: 0.78rem !important;
+    text-align: center !important;
+    border-top: 1px solid rgba(0,212,255,.08) !important;
+    padding-top: 1.2rem !important;
+    margin-top: 2.5rem !important;
+}
+
+footer a, body > p:last-of-type a {
+    color: #3a6080 !important;
+    -webkit-text-fill-color: #3a6080 !important;
+}
+
+/* ---- MISC ---- */
+.hidden  { display: none !important; }
+.download-button {
+    font-size: 0.78rem !important;
+    padding: 3px 12px !important;
+    border-radius: 20px !important;
+    background: rgba(0,212,255,.08) !important;
+    border: 1px solid rgba(0,212,255,.28) !important;
+    color: #47d7ff !important;
+    cursor: pointer !important;
+    margin-left: 0.5rem !important;
+}
+
+#view-selector {
+    width: auto !important;
+    height: 2.2rem !important;
+    padding-right: 2rem !important;
+}
+
+/* ---- SCROLLBAR ---- */
+::-webkit-scrollbar       { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: rgba(0,0,0,.2); }
+::-webkit-scrollbar-thumb { background: rgba(0,212,255,.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,212,255,.55); }
+
+/* ---- SELECTION ---- */
+::selection {
+    background: rgba(0,212,255,.25) !important;
+    color: #fff !important;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 600px) {
+    body  { padding: 1rem 0.75rem 3rem !important; }
+    #nav b { font-size: 1.5rem !important; }
+}
