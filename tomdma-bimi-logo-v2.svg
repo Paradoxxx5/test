@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+<title>Tom DMA</title>
+
+<!-- background circle -->
+<circle cx="150" cy="150" r="150" fill="#0E1A24"/>
+
+<!-- PCIe card body -->
+<g transform="translate(150,168) rotate(-18)">
+  <rect x="-105" y="-38" width="210" height="76" rx="8" fill="#1C2E3D"/>
+  <!-- bracket notch -->
+  <rect x="-120" y="-10" width="18" height="46" rx="4" fill="#1C2E3D"/>
+  <!-- gold connector fingers -->
+  <rect x="70" y="30" width="35" height="10" fill="#E8B94A"/>
+  <rect x="70" y="16" width="35" height="8" fill="#E8B94A"/>
+  <!-- chip -->
+  <rect x="-15" y="-24" width="55" height="34" rx="3" fill="#2E4658"/>
+  <!-- small components -->
+  <rect x="-70" y="10" width="26" height="10" rx="2" fill="#6B8CA6"/>
+  <circle cx="45" cy="10" r="7" fill="#D8DEE4"/>
+</g>
+
+<!-- cat tail -->
+<path d="M 205 95 C 235 70, 235 40, 205 30 C 190 25, 178 35, 182 48 C 185 58, 198 55, 200 45"
+      fill="none" stroke="#E8862E" stroke-width="16" stroke-linecap="round"/>
+
+<!-- cat body -->
+<ellipse cx="150" cy="175" rx="42" ry="34" fill="#F0902F"/>
+
+<!-- front paws -->
+<ellipse cx="120" cy="205" rx="13" ry="10" fill="#F0902F"/>
+<ellipse cx="150" cy="210" rx="13" ry="10" fill="#F0902F"/>
+
+<!-- cat head -->
+<circle cx="140" cy="120" r="38" fill="#F0902F"/>
+
+<!-- ears -->
+<path d="M 108 100 L 96 68 L 128 90 Z" fill="#F0902F"/>
+<path d="M 165 92 L 182 62 L 190 96 Z" fill="#F0902F"/>
+<path d="M 112 92 L 106 76 L 122 88 Z" fill="#E8637A"/>
+<path d="M 170 88 L 180 70 L 184 92 Z" fill="#E8637A"/>
+
+<!-- face markings -->
+<ellipse cx="122" cy="126" rx="12" ry="9" fill="#FBE7CE"/>
+<ellipse cx="158" cy="126" rx="12" ry="9" fill="#FBE7CE"/>
+
+<!-- eyes -->
+<circle cx="126" cy="116" r="8" fill="#2AA6C9"/>
+<circle cx="154" cy="116" r="8" fill="#2AA6C9"/>
+<circle cx="126" cy="116" r="3" fill="#0E1A24"/>
+<circle cx="154" cy="116" r="3" fill="#0E1A24"/>
+
+<!-- nose -->
+<path d="M 136 134 L 144 134 L 140 140 Z" fill="#D8637A"/>
+
+<!-- collar -->
+<path d="M 116 148 Q 140 160, 164 148" fill="none" stroke="#2A8FB0" stroke-width="8" stroke-linecap="round"/>
+<circle cx="140" cy="159" r="5" fill="#E8B94A"/>
+
+</svg>
